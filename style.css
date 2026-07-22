@@ -1,0 +1,104 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/cetpro.pg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: rgb(145, 136, 136);
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/cetpro.pg.jpg');
+  padding: 20px;
+   text-align: center;
+  box-shadow: 0 4px 10px;
+}
+
+header h1 {
+  color: rgb(45, 233, 7);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 200;
+  max-width: 100%;
+  height: auto;
+}
+
+ nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.btn-menu {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-menu:hover {
+  background: #e55a00;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.contenido h2 {
+  color: #00ff22;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.contenido p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+#historia {
+  display: none;
+  text-align: left;
+}
+
+footer {
+  background: rgba(2, 194, 12, 0.9);
+  color: #111111;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+  .btn-menu { padding: 10px 15px; font-size: 14px; }
+}

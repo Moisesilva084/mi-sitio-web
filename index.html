@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CETPRO La Arena - Educación Técnica Productiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <div class="img" id="logo-txt">
+        <img src="image/logo.jfif" alt="" width="200">
+    </div>
+    <header>
+        <h1>CETPRO LA ARENA</h1>
+        <p>Formando técnicos para el futuro</p>
+        <div class="img">
+            <img src="image/cetpro.pg.jpg" alt="imagen">
+        </div>
+        <nav>
+            <a href="#inicio" class="btn-menu" onclick="mostrarSeccion('inicio')">Inicio</a>
+            <a href="#programas" class="btn-menu" onclick="mostrarSeccion('programas')">Programas de Estudio</a>
+            <a href="#contacto" class="btn-menu" onclick="mostrarSeccion('contacto')">Contacto</a>
+            <button class="btn-menu" onclick="mostrarHistoria()">Historia</button>
+        </nav>
+    </header>
+
+    <div class="contenido">
+        <div id="inicio">
+            <h2>Bienvenidos al CETPRO La Arena</h2>
+            <p>Somos una institución dedicada a la formación técnica productiva en la región Piura. Brindamos carreras
+                prácticas con docentes calificados y talleres equipados para que aprendas haciendo.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas quidem esse recusandae, adipisci
+                totam laborum. At error animi unde, commodi iste nam sit hic laudantium blanditiis, nulla aperiam ab.
+            </p>
+        </div>
+
+        <div id="programas" > 
+            <h2>Nuestros Programas de Estudio</h2>
+             <UL>
+             <li>PLATAFORMAS Y SERVICIOS</li>
+             <li>COSMETOLOGIA & BARERIA</li>
+             <li>SERVICIOS BASICOS GASTRONOMICOS</li>
+             <li>MECANICA DE MOTOS</li>
+            </UL>
+        </div>
+
+        <div id="contacto">
+            <h2>Contáctanos</h2>
+            <p><strong>Dirección:</strong> Jr. Francisco Pizarro N° 400 - Sincapé - La Arena<br>
+                <strong>Teléfono:</strong> 931 826 454<br>
+                <strong>Horario:</strong> Lunes a Viernes 8:00 a.m. - 12:30 p.m.
+            </p>
+        </div>
+        <div id="historia">
+            <h2>Nuestra Historia</h2>
+            <p>El CETPRO La Arena fue fundado con la misión de brindar oportunidades de formación técnica a jóvenes y
+                adultos de la provincia. Desde su creación, hemos formado cientos de técnicos que hoy trabajan en
+                empresas de Piura y todo el Perú.</p>
+            <p>Nuestra visión es ser líderes en educación técnico-productiva, formando profesionales competentes,
+                emprendedores y con valores.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2026 CETPRO La Arena </p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(seccion) {
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById('programas').style.display = 'none';
+            document.getElementById('contacto').style.display = 'none';
+            document.getElementById('historia').style.display = 'none';
+            
+            document.getElementById(seccion).style.display = 'block';
+        }
+        function mostrarHistoria() {
+            mostrarSeccion('historia');
+        }
+    </script>
+     
+</body>
+
+</html>
