@@ -4,83 +4,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CETPRO La Arena - Educación Técnica Productiva</title>
+    <title>CETPRO La Arena </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body> 
-    <div class="img" id="logo-txt">
-        <img src="image/logo.jfif" alt="" width="200">
-    </div>
+<body>
     <header>
-        <h1>CETPRO LA ARENA</h1>
-        <p>Formando técnicos para el futuro</p>
-        <div class="img">
-            <img src="image/cetpro.pg.jpg" alt="imagen">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.jfif" alt="Logo CETPRO La Arena">
+                <h1>CETPRO La Arena</h1>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <nav id="menu">
+                <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+                <a href="#" onclick="mostrarSeccion('programas')">Programas de Estudio</a>
+                <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+            </nav>
+        
         </div>
-        <nav>
-            <a href="#inicio" class="btn-menu" onclick="mostrarSeccion('inicio')">Inicio</a>
-            <a href="#programas" class="btn-menu" onclick="mostrarSeccion('programas')">Programas de Estudio</a>
-            <a href="#contacto" class="btn-menu" onclick="mostrarSeccion('contacto')">Contacto</a>
-            <button class="btn-menu" onclick="mostrarHistoria()">Historia</button>
-        </nav>
     </header>
 
-    <div class="contenido">
-        <div id="inicio">
+    <main>
+
+        <section id="inicio" class="activo">
             <h2>Bienvenidos al CETPRO La Arena</h2>
-            <p>Somos una institución dedicada a la formación técnica productiva en la región Piura. Brindamos carreras
-                prácticas con docentes calificados y talleres equipados para que aprendas haciendo.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas quidem esse recusandae, adipisci
-                totam laborum. At error animi unde, commodi iste nam sit hic laudantium blanditiis, nulla aperiam ab.
-            </p>
-        </div>
+            <div class="contenido-seccion">
+                <img src="images/cetpro.pg.jpg" alt="Estudiantes CETPRO">
+                <p>Somos una institución de Educación Técnico Productiva dedicada a formar profesionales técnicos
+                    competentes, con valores y preparados para el mundo laboral. Brindamos carreras prácticas, docentes
+                    calificados y talleres equipados para que aprendas haciendo. Desde 1998 formando técnicos que
+                    transforman La Arena y todo el Perú.</p>
+            </div>
+        </section>
 
-        <div id="programas" > 
-            <h2>Nuestros Programas de Estudio</h2>
-             <UL>
-             <li>PLATAFORMAS Y SERVICIOS</li>
-             <li>COSMETOLOGIA & BARERIA</li>
-             <li>SERVICIOS BASICOS GASTRONOMICOS</li>
-             <li>MECANICA DE MOTOS</li>
+        <section id="programas">
+    <h2>Programas de Estudio</h2>
+    <p style="text-align:center; margin-bottom:10px;">Selecciona una carrera para ver detalles:</p>
+    <hr>
+
+    <div class="grid-botones">
+        
+        
+        <button class="btn-programa" onclick="abrirModal('ti')">Plataforma y Servicio de Tecnologías de la Información</button>
+       
+        <button class="btn-programa" onclick="abrirModal('confeccion')">Fabricación de Prendas de Vestir</button>
+     
+        <button class="btn-programa" onclick="abrirModal('almacen')">Operaciones de Almacenamiento</button>
+       
+        <button class="btn-programa" onclick="abrirModal('peluqueria')">Peluquería y Barbería</button>
+   
+        <button class="btn-programa" onclick="abrirModal('motos')">Mecánica de Motos</button>
+       
+        <button class="btn-programa" onclick="abrirModal('panaderia')">Asistencia en Panadería y Pastelería</button>
+       
+        <button class="btn-programa" onclick="abrirModal('gastronomia')">Servicios Básicos Gastronómicos</button>
+
+    </div>
+
+    <div id="modal-ti" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('ti')">&times;</span>
+        <h3>Plataformas y Servicios de Tecnologías de la Información</h3>
+        <img src="images/plataformas.jpg" alt="Alumnos de TI">
+        <p><b>Duración:</b> 2 años</p>
+        <p><b>MODULOS:
+
+            <ul>
+                <ul>- Atencion y asistencia a nivel operativo y funcional de los sistemas o Servicios.</ul>
+                <ul>- Supervicion de infraestructura y servicios de tecnologias de la informacion.</ul>
+                <ul>- Planificacion y puesta en produccion de los sistemas de informacion.</ul>
+                <ul>- Administracion de la infraestructura y plataformas de tecnologiasde la informacion.</ul>
+            </ul>
+            <hr>. <p>
+        <p><b>Campo laboral:</b> Soporte técnico, cabinas de internet, empresas, emprendimiento propio.</p>
+      </div>
+    </div>
+
+    <div id="modal-confeccion" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('confeccion')">&times;</span>
+        <h3>Fabricación de Prendas de Vestir</h3>
+        <img src="images/vestir.jpg" alt="Taller de Confección">
+        <p><b>Duración:</b> 2 años</p>
+        <p><b>MODULOS:</b>
+        <ul>
+            <ul>- Tendido y tizado de las piezas de las prendas de vestir.</ul>
+            <ul>- Corte y habilitado de las prendas de vestir.</ul>
+            <ul>- Ensamblaje y acabados de las prendas de vestir.</ul>
+            <ul>- Planificacion y control del proceso de fabricacion de las prendas de vestir.</ul>
+        </ul>
+        <hr>. </p>
+        <p><b>Campo laboral:</b> Talleres, fábricas, marca propia.</p>
+      </div>
+    </div>
+
+     <div id="modal-almacen" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('almacen')">&times;</span>
+        <h3>Operaciones de Almacenamiento</h3>
+        <img src="images/almacen.jpg" alt="Operaciones de Almacenamiento">
+        <p><b>Duración:</b> 1 año</p>
+        <p><b>MODULOS:</b> 
+        <ul>
+            <ul>- Organizacion de almacen</ul>
+            <ul>- Control del Almacenamiento</ul>
+            <ul>- Ensamblaje y acabados de las prendas de vestir.</ul>
+            <ul>- Planificacion y control del proceso de fabricacion de las prendas de vestir.</ul>
+        </ul>
+    <hr> . <p></p>
+        <p><b>Campo laboral:</b> Titulo auxiliar tecnico en operaciones de almacen.</p>
+      </div>
+    </div>
+
+     <div id="modal-peluqueria" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('peluqueria')">&times;</span>
+        <h3>    <p>Peluquería y Barbería</p></h3>
+        <img src="images/peluqueria.jpg" alt="Taller de Confección">
+        <p><b>Duración:</b> 1 año</p>
+        <p><b>MODULOS:
+            <UL>
+                <ul>- Estetica del cabello barba y bigote</ul>
+                <ul>- Tecnicas capilares tintes y permanentes</ul>
+
             </UL>
-        </div>
+            <hr> . 
+        <p><b>Campo laboral:</b> Titulo auxiliar tecnico en peluqueria y Barbería.</p>
+      </div>
+    </div>
 
-        <div id="contacto">
-            <h2>Contáctanos</h2>
-            <p><strong>Dirección:</strong> Jr. Francisco Pizarro N° 400 - Sincapé - La Arena<br>
-                <strong>Teléfono:</strong> 931 826 454<br>
-                <strong>Horario:</strong> Lunes a Viernes 8:00 a.m. - 12:30 p.m.
-            </p>
-        </div>
-        <div id="historia">
-            <h2>Nuestra Historia</h2>
-            <p>El CETPRO La Arena fue fundado con la misión de brindar oportunidades de formación técnica a jóvenes y
-                adultos de la provincia. Desde su creación, hemos formado cientos de técnicos que hoy trabajan en
-                empresas de Piura y todo el Perú.</p>
-            <p>Nuestra visión es ser líderes en educación técnico-productiva, formando profesionales competentes,
-                emprendedores y con valores.</p>
-        </div>
+     <div id="modal-motos" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('motos')">&times;</span>
+        <h3>Mecanica de motos</h3>
+        <img src="images/mecanica.jfif" alt="Taller de Confección">
+        <p><b>Duración:</b> 1 año</p>
+        <p>MODULOS:
+            <UL>
+                <UL>- Mantenimiento y reparacion de los sistemas del vehiculo motorizado</UL>
+                <ul>- Mantenimiento y reparacion de motores de combustion interna</ul>
+
+            </UL>
+            <hr>.
+        <p><b>Campo laboral:  Titulo  Auxiliar tecnico en mecanica de motos y vehiculos a fines.</p>
+      </div>
+    </div>
+
+     <div id="modal-panaderia" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('panaderia')">&times;</span>
+        <h3>Asistencia en panaderia y pasteleria</h3>
+        <img src="images/cocina..jpg" alt="Taller de Confección">
+        <p><b>Duración:</b> 1 año</p>
+        <p><b>MODULOS:
+            <UL>
+                <UL>- Acondicionamiento, mesclado y tratamientos termicos de productos de panaderia y pasteleria</UL>
+                <ul>- Tecnicas de biotecnologia de elaboracion y presentacion de productos basicos de reposteria</ul>
+            </UL>
+            <hr> .
+        <p><b>Campo laboral:   Titulo  de auxiliar tecnico.</p>
+      </div>
+    </div>
+
+     <div id="modal-gastronomia" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('gastronomia')">&times;</span>
+        <h3>Servicios basicos Gastronómicos</h3>
+        <img src="images/gastronomia.jfif" alt="Taller de Confección">
+        <p><b>Duración:</b> 1 año </p>
+        <p><b>MODULOS:</b> 
+            <ul> 
+                <ul>- Habilitar los insumos y/o materia prima , bateria mayor y menor de area de cocina, de acuerdo con las BPM y procedimientos del establecimiento</ul>
+                <ul>- Asistir en el proceso de elaboracion de la oferta gastronomica segun BPM, tecnicas gastronomicas basicas, politicas y procedimientos del establecimiento y las instrucciones del jefe inmediato</ul>
+            </ul>
+            <HR>.
+        <p><b>Campo laboral: Titulo de auxiliar tecnico .</p>
+      </div>
     </div>
     
+   
+
+</section>
+
+        
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <div class="contenido-seccion">
+                <img src="images/fachada cetpro.jfif" style="width: 100%;" alt="Fachada CETPRO">
+                <p><b>Dirección:</b> Ca. Francisco Pizarro 400, La Arena 20621,peru<br>
+                    <b>Teléfono:</b>  931 826 454 | <b>WhatsApp:</b> 931 826 454 <br>
+                    <b>Horario:</b> Lunes a Viernes 8:00am - 6:00pm
+                   
+                </p>
+
+                <div class="enlace">
+                    <li><strong>facebook :</strong></li>
+                        <a href="https://www.facebook.com/cetprolaarenapiura">Visitar facebook</a>
+                </div>
+
+                <div class="mapa">
+                    <h3 style="margin-bottom:15px; color:#3f963f;">Ubícanos en Google Maps :</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.4493692063866!2d-80.7066072!3d-5.3481742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a23b14636e2cb%3A0xcb3ab6b5453d08b2!2sCentro%20de%20Educaci%C3%B3n%20T%C3%A9cnico%20Productiva%20La%20Arena!5e0!3m2!1ses!2spe!4v1782254566639!5m2!1ses!2spe"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <p style="font-size:14px; margin-top:8px;"></p>
+                </div>
+
+                <h3 style="margin-top:40px; color:#3f963f;">¿Interesado en estudiar? Escríbenos :)..</h3>
+                <form action="https://formspree.io/f/mlgygwad" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <input type="tel" name="telefono" placeholder="Tu teléfono/WhatsApp" required>
+                    
+                        <select id="programa-interes" name="programa de interes" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Operaciones de Almacenamiento">Operaciones de Almacenamiento</option>
+                            <option value="Peluquería y Barbería">Peluquería y Barbería</option>
+                            <option value="Mecánica de Motos">Mecánica de Motos</option>
+                            <option value="Plataformas y Servicios de TI">Plataformas y Servicios de TI</option>
+                            <option value="Fabricación de Prendas de Vestir">Fabricación de Prendas de Vestir</option>
+                            <option value="Asistencia en Panadería y Pastelería">Asistencia en Panadería y Pastelería</option>
+                            <option value="Servicios Básicos Gastronómicos">Servicios Básicos Gastronómicos</option>
+                        </select>
+
+                    <button type="submit">Enviar Datos</button>
+                </form>
+                <p style="font-size:13px; margin-top:10px;"></p>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>© 2026 CETPRO La Arena </p>
+        <p>© 2026 CETPRO La Arena | Una oportunidad nueva para un gran comienzo.</p>
     </footer>
 
     <script>
-        function mostrarSeccion(seccion) {
-            document.getElementById('inicio').style.display = 'none';
-            document.getElementById('programas').style.display = 'none';
-            document.getElementById('contacto').style.display = 'none';
-            document.getElementById('historia').style.display = 'none';
-            
-            document.getElementById(seccion).style.display = 'block';
+        function mostrarSeccion(id) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('activo'));
+            document.getElementById(id).classList.add('activo');
+            cerrarMenu();
+            window.scrollTo(0, 0);
         }
-        function mostrarHistoria() {
-            mostrarSeccion('historia');
+
+        function mostrarPrograma(id) {
+            document.querySelectorAll('.detalle-programa').forEach(p => p.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('activo');
+        }
+
+        function cerrarMenu() {
+            document.getElementById('menu').classList.remove('activo');
         }
     </script>
-     
+<script>
+function abrirModal(id) {
+  document.getElementById('modal-' + id).style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function cerrarModal(id) {
+  document.getElementById('modal-' + id).style.display = 'none';
+  document.body.style.overflow = 'auto'; 
+}
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = "none";
+    document.body.style.overflow = 'auto';
+  }
+}
+</script>>
+
+    <a href="https://wa.me/51931826454?text=Hola,buen día. Si deseas informaciòn comunicate con nosotros"
+   class="whatsapp"
+   target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+         alt="WhatsApp">
+     </a>
+
+   <style>
+    .whatsapp {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     width: 65px;
+     height: 65px;
+     z-index: 1000;
+     }
+
+    .whatsapp img:hover {
+      width: 95%;
+      height: 95%;
+     }
+ 
+    </style>
+
 </body>
 
 </html>
